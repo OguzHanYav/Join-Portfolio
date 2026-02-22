@@ -207,7 +207,7 @@
   }
 
   .addTaskBoardMobile {
-    background-image: url(/assets/icons/plusAddTaskMobile.png);
+    background-image: url(../assets/icons/plusAddTaskMobile.png);
     width: 40px;
     height: 40px;
     cursor: pointer;

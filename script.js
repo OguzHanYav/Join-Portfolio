@@ -50,7 +50,7 @@ function renderPopup(action) {
       popupDiv.innerHTML = `You Signed Up successfully`;
       break;
     case "addTask":
-      popupDiv.innerHTML = `Task added to board <img src="/assets/icons/IconBoard.png" alt="" />`;
+      popupDiv.innerHTML = `Task added to board <img src="./assets/icons/IconBoard.png" alt="" />`;
       break;
     case "addContact":
       popupDiv.innerHTML = `Contact succesfully created`;

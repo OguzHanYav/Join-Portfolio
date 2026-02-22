@@ -1,37 +1,34 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Join – Login</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
 
-  <!-- optional: deine Styles -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+    <!-- CSS (wie bei Summary) -->
+    <link rel="stylesheet" href="./css/assets.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/site_style/login_signup.css" />
+    <link rel="stylesheet" href="./css/media.css" />
 
-  <!-- Minimal: du kannst später dein echtes Login-Markup reinpacken -->
-  <main style="max-width: 900px; margin: 40px auto; padding: 16px;">
-    <h1>Join – Demo</h1>
-    <p>Starte die Demo oder melde dich an.</p>
+    <!-- Favicons (wie bei Summary) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
 
-    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
-      <button onclick="guestLogin()">Als Gast starten</button>
-      <a href="summary.html">Zur Summary</a>
-      <a href="board.html">Zum Board</a>
-      <a href="contacts.html">Zu Contacts</a>
-    </div>
-  </main>
+    <!-- Scripts (wie bei Summary, aber minimal) -->
+    <script src="./templates/login_signnup_template.js"></script>
+    <script src="./script.js"></script>
+    <script src="./JavaScript/login_signup.js"></script>
+  </head>
 
-<script>
-  function guestLogin() {
-    const user = { name: "Guest", email: "guest@join.dev", id: "guest" };
-    sessionStorage.setItem("user", JSON.stringify(user));
-    window.location.href = "summary.html";
-  }
-</script>
+  <body onload="renderLogin()">
+    <!-- Das braucht renderLogin() -->
+    <div id="loginContent" class="loginContent"></div>
 
-  <!-- dein vorhandenes Login/Signup Script -->
-  <script src="JavaScript/login_signup.js"></script>
-</body>
+    <!-- optional (falls du Popups willst wie “Signed up successfully”) -->
+    <div id="popupDiv" class="popup"></div>
+  </body>
 </html>

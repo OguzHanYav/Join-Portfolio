@@ -1,5 +1,3 @@
-// const BASE_URL =
-//   "https://join-26d58-default-rtdb.europe-west1.firebasedatabase.app/";
  const BASE_URL = "https://join-portfolio-71702-default-rtdb.europe-west1.firebasedatabase.app/";
 
 let userLocal = [];

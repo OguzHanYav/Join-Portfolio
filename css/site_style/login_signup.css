@@ -1,0 +1,316 @@
+.loginContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.bgLogin {
+  background-color: rgba(246, 247, 248, 1);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  z-index: 10000;
+}
+
+.loginLegalContainer {
+  position: absolute;
+  bottom: 30px;
+}
+
+.loginLegalSubContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.loginLegalSubContainer a {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #a8a8a8;
+  width: 110px;
+}
+
+.loginLegalSubContainer a:hover {
+  color: #29abe2;
+  font-weight: bold;
+}
+
+#arrowToCloseSignUp {
+  position: absolute;
+  left: -40px;
+}
+
+.imgDiv {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter;
+  width: 232px;
+  min-width: 232px;
+  height: calc(100vh - 128px);
+  align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  justify-content: space-between;
+}
+
+.loginField {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBox {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 48px 88px;
+}
+
+.LogoNavImgLogin {
+  position: absolute;
+  top: 64px;
+  left: 64px;
+}
+
+.headlineAndBorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.loginHeadline {
+  font-size: 61px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.border {
+  width: 90%;
+  height: 3px;
+  background-color: rgba(41, 171, 226, 1);
+}
+
+.loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.inputLogin::placeholder {
+  text-indent: 16px;
+  color: rgba(209, 209, 209, 1);
+}
+
+.rememberDiv {
+  display: flex;
+  width: 80%;
+  gap: 8px;
+}
+
+.inputLogin {
+  width: 422px;
+  height: 44px;
+  border: solid 1px rgba(209, 209, 209, 1);
+  border-radius: 10px;
+  text-indent: 16px;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 422px;
+  align-items: center;
+}
+
+.iconLogin {
+  margin-left: -40px;
+  height: 24px;
+  width: 24px;
+}
+
+.loginButtonDiv {
+  gap: 35px;
+  display: flex;
+}
+
+.buttonLogin {
+  width: 110px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: rgba(42, 54, 71, 1);
+  color: White;
+  font-size: 21px;
+  font-weight: 700;
+  border-style: none;
+  transition: 0.1s;
+}
+
+.buttonLogin:hover {
+  background-color: #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.buttonSignIn {
+  width: 126px;
+  height: 55px;
+  border-radius: 8px;
+  background-color: rgba(42, 54, 71, 1);
+  color: White;
+  font-size: 21px;
+  font-weight: 700;
+  border-style: none;
+  transition: 0.1s;
+}
+
+.buttonSignIn:hover {
+  background-color: #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+.buttonGuestLogin {
+  width: 177px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  color: rgba(42, 54, 71, 1);
+  border: solid 1px rgba(42, 54, 71, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s;
+  box-sizing: border-box;
+}
+
+.buttonGuestLogin:hover {
+  color: #29abe2;
+  border-color: #29abe2;
+  border-width: 2px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.signupArrow {
+  height: 21px;
+  left: -34px;
+  cursor: pointer;
+  position: absolute;
+  padding: 8px;
+  border-radius: 99px;
+}
+
+.signupArrow:hover {
+  background-color: rgb(239, 239, 239);
+  transition: 0.1s;
+}
+
+.singUpLogin {
+  position: absolute;
+  top: 67px;
+  right: 60px;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.singUpLoginSpan {
+  font-size: 20px;
+}
+
+.buttonSingUpLogin {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(42, 54, 71, 1);
+  border-radius: 8px;
+  padding: 15px 16px;
+  border-style: none;
+  width: 104px;
+  transition: 0.1s;
+}
+
+.buttonSingUpLogin:hover {
+  background-color: #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.singUpHeader {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.animateLogo {
+  animation: moveToCorner 1s ease-in-out forwards;
+  animation-iteration-count: 1;
+}
+
+.ppContentLogin {
+  margin: 0 96px 22px 96px;
+}
+
+.ppContentLogin h1 {
+  margin-left: 0;
+}
+
+.ppContentLogin a {
+  overflow-wrap: break-word;
+}
+
+.legalContentLogin {
+  margin-top: 30px;
+  margin-left: 96px;
+  margin-right: 96px;
+}
+
+.legalNoticeLoginHeadline {
+  margin-top: 120px;
+  margin-bottom: 40px;
+  font-size: 61px;
+  font-weight: 700;
+}
+
+.goBackLogin {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+@keyframes moveToCorner {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 274px;
+  }
+
+  100% {
+    top: 64px;
+    left: 64px;
+    transform: translate(0, 0);
+    width: 100px;
+  }
+}

@@ -1,0 +1,655 @@
+.content {
+  font-family: Inter;
+}
+
+.headerBoard {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.searchBarTasks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.searchBarDiv {
+  display: flex;
+  align-items: center;
+}
+
+.AddTaskButton {
+  background-color: rgb(42, 54, 71);
+  color: white;
+  border-radius: 10px;
+  width: 160px;
+  height: 48px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.AddTaskButton:hover {
+  background-color: rgb(41, 171, 226);
+  border: none;
+  transition: 0.1s;
+}
+
+.findTaskInput {
+  border-radius: 10px;
+  width: 312px;
+  height: 48px;
+  border: solid 1px rgba(168, 168, 168, 1);
+}
+
+::placeholder {
+  text-indent: 16px;
+  color: rgb(209, 209, 209);
+  font-size: 20px;
+}
+
+.boardContent {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin: 32px;
+  overflow-x: auto;
+  max-height: calc(100vh - 315px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.boardContent::-webkit-scrollbar {
+  display: none;
+}
+
+.statusContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.statusHeadline {
+  font-size: 24px;
+  padding: 8px;
+  display: flex;
+  color: rgb(66, 82, 110);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.taskCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 252px;
+}
+
+.boardOverlayMain {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.33);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  overflow-x: hidden;
+  z-index: 999;
+}
+
+.addTaskDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(246, 247, 248, 1);
+  overflow-x: hidden;
+  z-index: 999;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.boardOverlayMain.show {
+  display: flex;
+  opacity: 1;
+}
+
+.boardOverlay {
+  display: flex;
+  padding: 24px;
+  background-color: white;
+  width: 100%;
+  height: calc(100vh - 96px);
+  border-radius: 30px;
+  opacity: 33%;
+  transform: translateX(100%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  max-width: 1116px;
+}
+
+.addTaskSecDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  width: 100%;
+  height: calc(100vh - 96px - 80px);
+}
+
+.boardOverlay.show {
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+.taskCardLarge {
+  padding: 48px 40px 48px 40px;
+  gap: 80px;
+  background-color: rgba(255, 255, 255, 1);
+  width: 525px;
+  height: auto;
+  border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  transform: translateX(100%);
+  max-width: 1116px;
+}
+
+.taskCardLarge.show {
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+.addTaskMain {
+  display: flex;
+  margin-right: 56px;
+  position: relative;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputContainerTask {
+  display: flex;
+  flex-direction: column;
+  left: 742px;
+  gap: 32px;
+}
+
+.inputSubContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 422px;
+  position: relative;
+}
+
+.editOverlayButtonContainer {
+  display: flex;
+  gap: 25px;
+  padding-top: 18px;
+}
+
+.headlineAddTaskWindow {
+  font-size: 61px;
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-right: 12px;
+  padding-top: 30px;
+}
+
+.singleTaskCard {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 252px;
+  box-sizing: border-box;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.drag-area {
+  height: 100vh;
+  border: none;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.drag-area-highlight {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dragAreaEmpty {
+  height: auto;
+  background-color: rgb(231, 231, 231);
+  border: 2px dashed rgb(168, 168, 168);
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.categoryCard {
+  height: 27px;
+  border-radius: 8px;
+  padding: 4px 16px 4px 16px;
+  gap: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userStoryColor {
+  background-color: rgba(0, 56, 255, 1);
+}
+
+.technicalTaskColor {
+  background-color: rgba(31, 215, 193, 1);
+}
+
+.titleCard {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: rgba(42, 54, 71, 1);
+  width: 220px;
+}
+
+.descriptionCard {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: rgba(168, 168, 168, 1);
+  width: 220px;
+}
+
+.subtasksCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtasksSmall {
+  gap: 10px;
+  width: 100%;
+  height: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomCard {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.assignedToCard {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  height: 44px;
+  align-items: center;
+  padding: 0 6px;
+  margin-right: 8px;
+}
+
+.contactInitialsBoard {
+  margin-left: 24px;
+  font-size: 12px;
+  background-color: rgba(147, 39, 255, 1);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  color: #ffffff;
+  border: 2px solid white;
+  margin: -8px;
+}
+
+.myProgress {
+  margin-right: 1;
+  width: 128px;
+  height: 8px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 8px;
+}
+
+.myBar {
+  width: 1%;
+  height: 100%;
+  background-color: rgb(69, 137, 255);
+  border-radius: 8px;
+  transition: width 0.1s ease-in-out;
+}
+
+.subtasksCount {
+  display: flex;
+  flex-direction: row;
+  font-family: Inter;
+  font-size: 12px;
+  width: 73px;
+  height: 14px;
+  font-weight: 400;
+  line-height: 14.4px;
+  flex-wrap: nowrap !important;
+}
+
+.subTasksToClickLarge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+.headerSubtasks {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(66, 82, 110, 1);
+}
+
+.subtaskClickDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 6px 16px 6px 16px;
+  border-radius: 99px;
+  transition: 0.1s;
+  width: auto !important;
+  align-items: center;
+  max-width: 95%;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.subtaskClickDiv:hover {
+  background-color: rgb(239, 239, 239);
+  cursor: pointer;
+}
+
+.subtaskClickDiv:hover .subtaskClickButton {
+  background-color: rgb(209, 209, 209);
+}
+
+.singleSubtaskClick {
+  display: flex;
+  align-items: center !important;
+  width: auto !important;
+}
+
+.subtaskClickButton {
+  height: 16px;
+  width: 16px;
+  border-radius: 99px;
+  transition: 0.1s;
+  padding: px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtasksLarge {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doneSubtasksCount {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleCardLarge {
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 73.2px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.assignedToCardLarge {
+  gap: 8px;
+}
+
+.taskCardLargeContent {
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  white-space: normal;
+  flex: 1;
+}
+
+.dueDateCardLarge {
+  display: none;
+  flex-direction: row;
+  font-size: 19px;
+  gap: 25px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.hideSmallView {
+  display: none;
+}
+
+.descriptionCardLarge {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.prioLargeViewRight {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.prioImgLargeView {
+  width: 17px;
+}
+
+.assignedToCardLarge {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.headingsFontColor {
+  color: rgba(42, 54, 71, 1);
+}
+
+.assignedToLargeViewBottom {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.assignedToContainerLarge {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 8px;
+  padding: 7px 16px 7px 16px;
+}
+
+.assignedToContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.categoryCardLarge {
+  height: 27px;
+  border-radius: 8px;
+  padding: 4px 24px 4px 24px;
+  gap: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: 400;
+  /* line-height: 27.6px; */
+}
+
+.categoryCardLargeTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.closeButtonLargeView {
+  width: 24px;
+  height: 24px;
+  border-radius: 99px;
+  padding: 4px;
+  transition: 0.1s;
+}
+
+.closeButtonLargeView:hover {
+  background-color: rgb(239, 239, 239);
+  cursor: pointer;
+}
+
+.bottomCardLarge {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(42, 54, 71, 1);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.deleteButtonLargeView {
+  height: 18px;
+  width: 17px;
+  margin-right: 6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  background-image: url(../../assets/icons/deleteTask.png);
+}
+
+.editButtonLargeView {
+  height: 19px;
+  width: 19px;
+  margin-right: 6px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  background-image: url(../../assets/icons/editTask.png);
+}
+
+.hoverEffectDeleteEditTask {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hoverEffectDeleteEditTask:hover .deleteButtonLargeView {
+  background-image: url(../../assets/icons/deleteTaskBlue.png);
+}
+
+.hoverEffectDeleteEditTask:hover .editButtonLargeView {
+  padding: -2px;
+  background-image: url(../../assets/icons/editTaskBlue.png);
+}
+
+.hoverBlue {
+  color: rgba(42, 54, 71, 1);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.hoverEffectDeleteEditTask:hover .hoverBlue {
+  color: rgba(41, 171, 226, 1);
+  font-weight: 600;
+}
+
+.overlayEditButton {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background-color: #2a3647;
+  color: white;
+  font-weight: 700;
+  transition: 0.1s;
+  height: 55px;
+  width: 113px;
+  border-radius: 8px;
+  font-size: 21px;
+  font-family: Inter;
+  cursor: pointer;
+}
+
+.plusButton {
+  width: 24px;
+  /* Setzen Sie die gewünschten Abmessungen */
+  height: 24px;
+  cursor: pointer;
+  background-image: url("../../assets/icons/plusbutton.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
+  padding: 3px;
+}
+
+.plusButton:hover {
+  background-image: url("../../assets/icons/plusButtonBlue.png");
+}
+
+.rotate {
+  transform: rotate(5deg);
+  transition: transform 0.2s ease;
+}
+
+.placeholderDragField {
+  border: 1px dashed rgba(168, 168, 168, 1);
+  background-color: rgb(246, 247, 248);
+  height: auto;
+  min-height: 233px;
+  width: 252px;
+  border-radius: 24px;
+}

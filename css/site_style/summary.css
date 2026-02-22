@@ -1,0 +1,271 @@
+.contentSubContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryBoardMain {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-left: 96px;
+}
+
+.greeting {
+  font-size: 47px;
+  font-weight: 500;
+  margin-left: 110px;
+  text-wrap: nowrap;
+}
+
+.userNameSummary {
+  font-size: 64px;
+  font-weight: 700;
+  color: #29ABE2;
+  margin-top: 3px;
+}
+
+.summaryBoardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  min-width: 560px;
+  height: 562px;
+}
+
+.upperRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.toDoDisplay, .doneDisplay {
+  width: 264px;
+  height: 168px;
+  background-color: white;
+  border-radius: 30px;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.toDoDisplay, .tasksBoardDisplay {
+  transform-origin: left center;
+}
+
+.doneDisplay, .feedbackDisplay {
+  transform-origin: right center;
+}
+
+.toDoDisplay:hover, .doneDisplay:hover {
+  transform: scale(1.065);
+  background-color: #2A3647;
+  cursor: pointer;
+}
+
+.middleRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 61px;
+  width: 100%;
+  height: 168px;
+  background-color: white;
+  border-radius: 30px;
+  transform-origin: left top;
+  text-decoration: none;
+  color: black;
+}
+
+.middleRow:hover {
+  transform: scale(1.03);
+  background-color: #2A3647;
+  cursor: pointer;
+}
+
+.lowerRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksBoardDisplay, .tasksProgressDisplay, .feedbackDisplay {
+  width: 168px;
+  height: 168px;
+  background-color: white;
+  border-radius: 30px;
+  transition: 0.1s;
+}
+
+.feedbackDisplay:hover, .tasksBoardDisplay:hover, .tasksProgressDisplay:hover {
+  transform: scale(1.075);
+  background-color: #2A3647;
+  cursor: pointer;
+}
+
+.editIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 69px;
+  width: 69px;
+  border-radius: 99px;
+  background-color: #2A3647;
+}
+
+.toDoDisplay:hover .editIconContainer {
+  background-color: white;
+}
+
+.editIconSummary {
+  height: 24.37px;
+}
+
+.toDoDisplay:hover .editIconSummary {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(300%) hue-rotate(175deg) brightness(26%) contrast(80%);
+}
+
+.toDoDoneAmount {
+  color: black;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.toDoDone {
+  color: #2A3647;
+  font-size: 20px;
+}
+
+.toDoDisplay:hover .toDoDoneAmount {
+  color: white;
+}
+
+.toDoDisplay:hover .toDoDone {
+  color: white;
+}
+
+.displayRightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doneIconSummary {
+  Width: 38px;
+}
+
+.doneDisplay:hover .toDoDoneAmount {
+  color: white;
+}
+
+.doneDisplay:hover .toDoDone {
+  color: white;
+}
+
+.doneDisplay:hover .doneIconSummary {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(300%) hue-rotate(175deg) brightness(26%) contrast(80%);
+}
+
+.doneDisplay:hover .editIconContainer {
+  background-color: white;
+}
+
+.deadlineLeftSection {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.amountStatusContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.deadlineUrgencyStatusIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: #FF3D00;
+  border-radius: 99px;
+}
+
+.deadlineAmount {
+  color: black;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.urgencyStatus {
+  color: #2A3647;
+  font-size: 20px;
+}
+
+.seperatingLine {
+  height: 102.02px;
+  width: 2px;
+  background-color: #D1D1D1;
+}
+
+.deadlineRightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  color: #2A3647;
+}
+
+.deadlineDate {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.middleRow:hover .deadlineRightSection {
+  color: white;
+}
+
+.middleRow:hover .deadlineAmount {
+  color: white;
+}
+
+.middleRow:hover .urgencyStatus {
+  color: white;
+}
+
+.lowerRowSubContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lowerRowSubContainer:hover .lowerRowAmount {
+  color: white;
+}
+
+.lowerRowSubContainer:hover .lowerRowType {
+  color: white;
+}
+
+.lowerRowAmount {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.lowerRowType {
+  font-size: 20px;
+  color: #2A3647;
+  text-align: center;
+}
+
+.lowerRow a {
+  text-decoration: none;
+  color: black;
+}
+
+.upperRow a {
+  text-decoration: none;
+  color: black;
+}

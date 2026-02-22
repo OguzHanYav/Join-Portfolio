@@ -1,0 +1,173 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board</title>
+    <link rel="stylesheet" href="./css/assets.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/site_style/board.css" />
+    <link rel="stylesheet" href="./css/site_style/login_signup.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/site_style/add_task.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script src="./templates/login_signnup_template.js"></script>
+    <script src="./templates/help_template.js"></script>
+    <script src="./templates/board_templates.js"></script>
+    <script src="./templates/add_task_template.js"></script>
+    <script src="./JavaScript/contacts.js"></script>
+    <script src="./JavaScript/add_task.js"></script>
+    <script src="./JavaScript/board.js"></script>
+    <script src="./JavaScript/board_Task_Details.js"></script>
+    <script src="./JavaScript/board_drag.js"></script>
+    <script src="./script.js"></script>
+    <script src="./JavaScript/login_signup.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+  </head>
+  <body onload="initBoard()">
+    <div class="filler"></div>
+    <nav class="navBar">
+      <div class="widthFull">
+        <img class="LogoNavImg" src="./assets/img/LogoNav.svg" />
+        <div class="navBarMenu">
+          <div class="menuLinkDiv">
+            <a class="menuLink" href="./summary.html">
+              <img class="navIcon" src="./assets/icons/IconSummary.png" />
+              Summary
+            </a>
+          </div>
+          <div class="menuLinkDiv">
+            <a class="menuLink" href="./add_task.html">
+              <img class="navIcon" src="./assets/icons/IconAddTask.png" />
+              Add Task
+            </a>
+          </div>
+          <div class="menuLinkDiv active">
+            <a class="menuLink linkActive" href="./board.html">
+              <img class="navIcon" src="./assets/icons/IconBoard.png" />
+              Board
+            </a>
+          </div>
+          <div class="menuLinkDiv">
+            <a class="menuLink" href="./contacts.html">
+              <img class="navIcon" src="./assets/icons/IconContacts.png" />
+              Contacts
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="menuLinkDiv mobileNoShow">
+        <a class="menuLink" href="./privacy_policy.html">Privacy Policy</a>
+        <a class="menuLink" href="./legal_notice.html">Legal notice</a>
+      </div>
+    </nav>
+    <div class="grow">
+      <header>
+        <div>
+          <div class="logoMedia"></div>
+        <div class="headline">Kanban Project Management Tool</div>
+        </div>
+        <div class="headerIconDiv">
+          <a class="helpIcon" href="./help.html"></a>
+        <div class="userIcon" id="userIcon"></div>
+      </div>
+      </header>
+      <div id="myDropdown" class="dropdown-content">
+        <a class="dropDownLink helpLinkDropDown" href="./help.html">Help</a>
+        <a href="./legal_notice.html" class="dropDownLink">Legal Notice</a>
+        <a href="./privacy_policy.html" class="dropDownLink">Privacy Policy</a>
+        <span onclick="logOut()" id="logOut" class="dropDownLink">Log out</span>
+      </div>
+      <div class="content">
+        <div class="headerBoard">
+        <div class="headerBoradMoblie">
+          <div style="font-size: 61px; font-weight: 700;">Board</div>
+          <div class="addTaskBoardMobile" onclick="addTask()"></div>
+        </div>
+        <div class="searchBarTasks">
+          <div class="searchBarDiv">
+          <input
+            class="findTaskInput"
+            required
+            type="text"
+            placeholder="Find Task"
+            id="findTask"
+            oninput="pullTasks(this.value)"
+          />
+          <img
+          src="./assets/icons/search.svg"
+          alt="email icon"
+          class="iconSearch" /></div>
+          <button class="AddTaskButton" onclick="addTask()">Add task +</button>
+        </div>
+      </div>
+
+      <div class="boardContent">
+        <div class="statusContainer">
+          <div class="statusHeadline"><b>To Do</b> <div class="plusButton" onclick="addTask()"></div></div>
+          <div class="taskCard drag-area" id="ToDoCard" ondrop="moveTo('to-do')" ondragover="allowDrop(event)"></div>
+        </div>
+
+        <div class="statusContainer">
+          <div class="statusHeadline"><b>In progress</b><div class="plusButton" onclick="addTask('in-progress')" ></div></div>
+          <div class="taskCard drag-area" id="InProgressCard" ondrop="moveTo('in-progress')" ondragover="allowDrop(event)"></div>
+        </div>
+
+        <div class="statusContainer">
+          <div class="statusHeadline"><b>Await feedback</b><div class="plusButton" onclick="addTask('await-feedback')" ></div></div>
+          <div class="taskCard drag-area" id="AwaitFeedbackCard" ondrop="moveTo('await-feedback')" ondragover="allowDrop(event)"></div>
+        </div>
+
+        <div class="statusContainer">
+          <div class="statusHeadline"><b>Done</b></div>
+          <div class="taskCard drag-area" id="DoneCard" ondrop="moveTo('done')" ondragover="allowDrop(event)"></div>
+        </div>
+      </div></div>
+
+      
+      <!--add Task start-->
+      <div
+        class="boardOverlayMain"
+        style="display: none"
+        id="addTaskMain"
+      >
+        <div
+          class="boardOverlay addTaskSecDiv"
+          id="addTask"
+        >
+        </div>
+      </div>
+      <!--add Task end-->
+      
+      <!--open Large Card start-->
+      <div
+        class="boardOverlayMain"
+        style="display: none"
+        id="taskCardLargeMain"
+        onclick="closetaskCardLarge()"
+      >
+      <div class="taskCardLarge" id="taskCardLarge" onclick="event.stopPropagation()"></div>
+      </div>
+      <!--open Large Card end-->
+      
+
+      
+    </div>
+  </div>
+  <div id="loginContent" class="loginContent"></div>
+  <div id="popupDiv" class="popup"></div>
+  </body>
+  <script>
+    let headerIcon = document.getElementById("userIcon");
+    let dropdownHeader = document.getElementById("myDropdown");
+    window.addEventListener("click", function (e) {
+      if (headerIcon.contains(e.target)) {
+        dropdownHeader.classList.toggle("show");
+      } else {
+        dropdownHeader.classList.remove("show");
+      }
+    });
+  </script>
+</html>

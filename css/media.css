@@ -1,0 +1,1084 @@
+@media (max-width: 1350px) {
+  .greeting {
+    display: none;
+  }
+
+  .drag-area {
+    height: auto;
+  }
+
+  .taskCard {
+    overflow-x: scroll;
+    width: 100%;
+    flex-direction: row;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .dragAreaEmpty {
+    width: calc(100% - 50px) !important;
+  }
+
+  .boardContent {
+    flex-direction: column;
+  }
+
+  .subHeadlineColor {
+    display: none;
+  }
+
+  .contactsList {
+    min-width: 365px;
+  }
+
+  .contactMainName {
+    font-size: 32px;
+  }
+
+  .contactLetterHeader,
+  .contactCardSmall {
+    width: 300px;
+  }
+
+  .contactInicialLarge {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .contactOverlayEdit {
+    width: 1040px;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+
+  .contactOverlayLeftSection {
+    padding: 0 32px;
+  }
+
+  .contactOverlayRightSection {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .prio p {
+    font-size: 14px;
+  }
+
+  .navBar {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .menuLink {
+    margin-left: 32px;
+  }
+
+  .LogoNavImg {
+    width: 80px;
+    height: 100px;
+  }
+
+  header {
+    max-width: calc(100vw - 180px);
+  }
+
+  .grow {
+    max-width: calc(100vw - 180px);
+  }
+
+  .filler {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .inputSubContainer {
+    width: 350px;
+  }
+
+  .contactOverlayEdit {
+    width: 970px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .inputSubContainer {
+    width: 300px;
+  }
+
+  .contactOverlayLeftSection {
+    font-size: 40px;
+  }
+
+  .contactOverlayEdit {
+    width: 850px;
+  }
+
+  .contactInputIcon {
+    right: 20px;
+  }
+
+  #addContactInputName,
+  #addContactInputMail,
+  #addContactInputPhone {
+    width: 80%;
+  }
+
+  .personIconBg {
+    margin-right: 32px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .addContactCancelButton {
+    width: 100px;
+    font-size: 18px;
+  }
+
+  .createContactButtonOverlay {
+    width: 190px;
+    font-size: 18px;
+  }
+
+  .prio p {
+    font-size: 20px;
+  }
+
+  .addTaskSplit {
+    flex-direction: column;
+    align-items: center;
+    max-height: calc(100vh - 390px);
+    overflow-y: scroll;
+  }
+
+  .addTaskButtonContainer {
+    padding-top: 40px;
+  }
+
+  .addTaskPortion {
+    width: 80%;
+  }
+
+  .contactHeadlineContainer {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    max-width: 560px;
+    margin: 100px 16px 0px 16px;
+    flex: 1;
+  }
+
+  .subHeadlineColor {
+    display: block;
+  }
+
+  .contactsBlueLine,
+  .AddTaskButton,
+  .textRequired {
+    display: none;
+  }
+
+  .contactsBlueLineVertical {
+    border: 3px solid #29abe2;
+    width: 90px;
+  }
+
+  .contentSubContainer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .summaryBoardMain {
+    margin: 24px 16px 24px 16px;
+  }
+
+  .headerBoard {
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .headerBoradMoblie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .addTaskBoardMobile {
+    background-image: url(/assets/icons/plusAddTaskMobile.png);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .findTaskInput,
+  .searchBarDiv {
+    width: 100%;
+  }
+
+  .contactContainer {
+    margin: 60px 32px;
+  }
+
+  .contactInicialsContainer {
+    gap: 16px;
+  }
+
+  .contactMainName {
+    text-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .ppContent {
+    margin: 0 22px 22px 22px;
+  }
+
+  .mobileShow {
+    display: block !important;
+  }
+
+  .inputSubContainer {
+    width: 300px;
+  }
+
+  .contactOverlayLeftSection {
+    height: 45%;
+    width: calc(100% - 24px);
+    padding: 0;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    align-items: flex-start;
+    padding-left: 24px;
+    flex-direction: column;
+  }
+
+  .lineLogoContainer {
+    position: unset;
+  }
+
+  .overlayLogo,
+  .contactCloseIcon {
+    display: none;
+  }
+
+  .contactOverlayRightSection {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .marginTopContact {
+    margin-top: -43px;
+  }
+
+  .contactOverlayEdit {
+    width: 500px;
+    height: 800px;
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .mobileAddContact {
+    flex-direction: column;
+  }
+
+  .paddingLogoOverlay {
+    display: none;
+  }
+
+  .addContactLeftSection {
+    height: 45%;
+    padding-left: 24px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 30px;
+    justify-content: center;
+  }
+
+  .addContactHeadline {
+    font-size: 56px;
+  }
+
+  .addContactSubHeadline {
+    font-size: 24px;
+  }
+
+  .addContactRightSection {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .inputContainer {
+    margin: 0 40px;
+    align-items: center;
+  }
+
+  .personIconBg {
+    margin: -40px 0 0 0;
+  }
+
+  .editOverlayButtonContainer {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .addContactCancelButton {
+    display: none;
+  }
+
+  .createContactButtonOverlay {
+    font-size: 21px;
+  }
+
+  body {
+    flex-direction: column-reverse;
+  }
+
+  header {
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .logoMedia {
+    background-image: url(../assets/img/Capa\ 1.svg);
+    width: 58px;
+    height: 58px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 40px;
+  }
+
+  .headline {
+    display: none;
+  }
+
+  .helpLinkDropDown {
+    display: block;
+  }
+
+  .helpIcon {
+    display: none;
+  }
+
+  .grow {
+    max-width: 100%;
+    overflow-y: unset;
+  }
+
+  .navBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    padding: 0;
+    z-index: 999;
+  }
+
+  .LogoNavImg {
+    display: none;
+  }
+
+  .widthFull {
+    flex-direction: row;
+  }
+
+  .navBarMenu {
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .mobileNoShow {
+    display: none !important;
+  }
+
+  .menuLinkDiv {
+    width: 20%;
+    height: 60px;
+    border-radius: 8px;
+  }
+
+  .menuLink {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .filler {
+    height: 70px;
+  }
+
+  .addTaskPortion {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .inputSubContainerAddTask {
+    max-width: 100%;
+  }
+
+  .inputAddTask {
+    max-width: 100%;
+  }
+
+  .drag-area {
+    height: auto;
+  }
+
+  .boardContent {
+    flex-direction: column;
+    max-height: calc(100vh - 344px);
+    margin-bottom: 0;
+  }
+
+  .prio p {
+    font-size: 18px;
+  }
+
+  .headlineAddTaskWindow b {
+    font-size: 40px;
+  }
+
+  .addTaskSecDiv {
+    padding: 0;
+  }
+
+  .addTaskDiv {
+    padding: 0;
+  }
+
+  .showHelp {
+    position: unset;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .helpHeadline {
+    margin-bottom: 0;
+  }
+
+  .helpHeadlineContainer {
+    padding: 0;
+  }
+
+  #arrowToCloseHelp {
+    right: 4px;
+    top: 100px;
+  }
+
+  .contactHeadlineContainer {
+    margin-top: 8px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contactsList1 {
+    height: calc(100vh - 175px);
+  }
+}
+
+@media (max-width: 750px) {
+  .contactContainer {
+    display: none;
+  }
+
+  .contactsList1 {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .contactsList {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .contactLetterHeader {
+    width: 90%;
+  }
+
+  .w100 {
+    width: 100%;
+  }
+
+  .contactMobile {
+    position: absolute;
+    display: block;
+    z-index: 999;
+    background-color: #f6f7f8;
+    top: 85px;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    height: calc(100vh - 275px);
+    margin: 0;
+    padding: 60px;
+  }
+
+  .returnToList {
+    background-image: url(../assets/icons/arrow-left-line.png);
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 720px) {
+  .taskCardLargeContent {
+    gap: 16px;
+    max-width: 396px;
+  }
+
+  .taskCardLarge {
+    width: 396px;
+    padding: 32px 24px 32px 24px;
+    gap: 0;
+    margin: 16px;
+  }
+
+  .categoryCardLarge {
+    padding: 4px 16px 4px 16px;
+    font-size: 16px;
+    line-height: 0;
+  }
+
+  .titleCardLarge {
+    font-size: 36px;
+    line-height: 43.2px;
+    font-weight: 700;
+  }
+
+  .descriptionCardLarge {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .dueDateCardLarge {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .assignedToCardLarge {
+    font-size: 16px;
+  }
+
+  .subtasksLarge {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .headerSubtasks {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .subtaskClickButton {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 650px) {
+  .userIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  .logoMedia {
+    width: 32px;
+    height: 39px;
+  }
+
+  .toDoDisplay,
+  .doneDisplay {
+    width: 46%;
+    height: 110px;
+  }
+
+  .middleRow {
+    height: 110px;
+  }
+
+  .lowerRowSubContainer {
+    width: 30%;
+    height: 110px;
+  }
+
+  .summaryBoardContainer {
+    height: fit-content;
+    gap: 16px;
+    width: fit-content;
+    min-width: 1px;
+  }
+
+  .toDoDisplay,
+  .doneDisplay {
+    width: 46%;
+    height: 110px;
+  }
+
+  .middleRow {
+    height: 110px;
+    gap: 20px;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
+
+  .lowerRowSubContainer {
+    width: 30%;
+    height: 110px;
+  }
+
+  .summaryBoardContainer {
+    height: fit-content;
+    gap: 16px;
+    width: fit-content;
+    min-width: 1px;
+  }
+
+  .contactHeadlineContainer {
+    max-width: 355px;
+  }
+
+  .editIconContainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .doneIconSummary {
+    width: 18px;
+  }
+
+  .editIconSummary {
+    height: 18px;
+  }
+
+  .editDeleteContainer {
+    display: none;
+  }
+
+  .toDoDoneAmount,
+  .deadlineAmount,
+  .lowerRowAmount {
+    font-size: 47px;
+  }
+
+  .deadlineDate {
+    font-size: 16px;
+  }
+
+  .toDoDone,
+  .lowerRowType {
+    font-size: 14px;
+  }
+
+  .deadlineUrgencyStatusIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .urgentIcon {
+    width: 24px;
+  }
+
+  .legalContent {
+    margin: 30px 32px;
+  }
+
+  h1 {
+    margin-left: 32px;
+  }
+
+  .addPersonButton {
+    display: none;
+  }
+
+  .addPersonIcon {
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 1000;
+    background-image: url(../assets/icons/personAdd.png);
+    background-color: #2a3647;
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 46px;
+    display: block;
+  }
+
+  .optionsMobile {
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 1000;
+    background-image: url(../assets/icons/more_vert.png);
+    background-color: #2a3647;
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 46px;
+  }
+
+  .dropdownOptions {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 400px) {
+  .taskCardLarge {
+    flex: 1;
+    width: 270px;
+    padding: 16px;
+    gap: 0;
+    margin: 16px;
+  }
+
+  .taskCardLargeContent {
+    max-height: 80%;
+  }
+
+  .subtaskClickDiv {
+    gap: 4px;
+  }
+
+  .menuLink {
+    font-size: 12px;
+  }
+
+  .navIcon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .menuLinkDiv {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .addContactHeadline {
+    font-size: 47px;
+  }
+
+  .editOverlayButtonContainer {
+    justify-content: center;
+  }
+
+  .addContactCancelButton {
+    display: none;
+  }
+
+  .addContactSubHeadline {
+    font-size: 20px;
+  }
+
+  .personIconBg {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .inputContainer {
+    max-width: 250px;
+    margin: 0 0 16px 0;
+  }
+
+  .inputSubContainer {
+    max-width: 245px;
+    font-size: 14px;
+  }
+
+  .userIcon {
+    margin-right: 50px;
+  }
+
+  .contactLetterHeader,
+  .contactCardSmall {
+    width: 275px;
+    gap: 20px;
+  }
+
+  .contactsList {
+    min-width: 300px;
+  }
+
+  .contactOverlayEdit {
+    width: 100%;
+    position: absolute;
+    height: 630px;
+  }
+
+  .paddingLogoOverlay {
+    display: none;
+  }
+
+  .addContactLeftSection {
+    height: 351px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
+
+  .addContactRightSection {
+    gap: 4px;
+  }
+
+  .personIconBg {
+    margin-right: 0;
+    margin-top: -43px;
+  }
+
+  .w600 {
+    width: 360px !important;
+  }
+
+  .prio p {
+    font-size: 13px;
+  }
+
+  .LogoNavImgLogin {
+    top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .w600 {
+    width: 460px !important;
+  }
+  .subHeadlineColor {
+    display: none;
+  }
+}
+
+@media (max-width: 1010px) {
+  @keyframes moveToCorner {
+    0% {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 274px;
+    }
+
+    100% {
+      top: 37px;
+      left: 38px;
+      transform: translate(0, 0);
+    }
+  }
+
+  .LogoNavImgLogin {
+    height: 78px;
+    width: 64px;
+    top: 37px;
+    left: 38px;
+  }
+
+  .loginBox {
+    margin: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 598px;
+    width: 100%;
+  }
+
+  .bgLogin {
+    overflow-y: hidden;
+  }
+
+  .loginForm {
+    max-width: 422px;
+    width: 100%;
+  }
+
+  .inputWrapper {
+    width: 100%;
+  }
+
+  .inputLogin {
+    width: 100%;
+  }
+
+  .loginField {
+    width: 100%;
+  }
+
+  .signupArrow {
+    left: 54px;
+  }
+
+  .ppContentLogin {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .legalContentLogin {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactOverlayEdit {
+    width: 80%;
+    height: 85vh;
+  }
+
+  .contactOverlayRightSection {
+    margin: 0;
+  }
+
+  .addContactSubHeadline {
+    display: none;
+  }
+
+  .inputContainer input {
+    width: 80%;
+  }
+
+  .loginBox {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  .bgLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .singUpLogin {
+    position: relative;
+    top: auto;
+    bottom: 60px;
+    right: auto;
+  }
+
+  .loginButtonDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+  }
+
+  .loginForm {
+    gap: 16px;
+  }
+
+  .loginHeadline {
+    font-size: 47px;
+  }
+
+  .rememberDiv p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-wrap: nowrap;
+  }
+
+  .buttonLogin {
+    width: 100%;
+    height: 51px;
+  }
+
+  .buttonSignIn {
+    width: 180px;
+    height: 51px;
+  }
+
+  .buttonGuestLogin {
+    height: 49px;
+  }
+
+  .ppContentLogin {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .legalContentLogin {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+/*SignUp*/
+@media (max-width: 482px) {
+  .ppContent p {
+    font-size: 14px;
+  }
+
+  .ppContent ul {
+    padding-left: 8px;
+  }
+
+  .signupArrow {
+    left: 0px;
+  }
+
+  .ContactHeadline {
+    font-size: 40px;
+  }
+
+  .contactMainName {
+    font-size: 24px;
+  }
+
+  .contactInicialLarge {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .contactHeadlineContainer {
+    margin: 24px auto 0 16px;
+    width: 285px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .subHeadlineColor {
+    display: none;
+  }
+
+  .contactMobile {
+    padding: 60px 30px;
+  }
+
+  .ppContentLogin {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .legalContentLogin {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .ppContentLogin h1 {
+    font-size: 44px;
+  }
+
+  .legalNoticeLoginHeadline {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .addTaskSecDiv {
+    max-width: 1625px;
+  }
+
+  .addTaskDiv {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,433 @@
+.content {
+  display: flex;
+}
+
+.contactsList {
+  display: flex;
+  min-width: 456px;
+  background-color: #fff;
+  height: calc(100vh - 96px);
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactsList1 {
+  display: flex;
+  height: calc(100vh - 96px);
+  flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.08);
+  gap: 8px;
+}
+
+.contactLetterHeader {
+  font-size: 20px;
+  width: 352px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  margin-left: 28px;
+  position: relative;
+}
+
+.contactLine {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(220, 220, 220);
+  position: absolute;
+  bottom: 8px;
+}
+
+.contactLetter {
+  padding-left: 40px;
+}
+
+.contactsList {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #a8a8a8;
+  --sb-size: 14px;
+}
+
+.contactsList::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.contactsList::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 7px;
+}
+
+.contactsList::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 7px;
+  border: 4px solid #ffffff;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .contactsList {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.addPersonButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgb(42, 54, 71);
+  width: 338px;
+  padding: 12px;
+  border-style: none;
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 24px 14px 8px 14px;
+  transition: 0.1s;
+  font-family: Inter;
+}
+
+.addPersonButton:hover {
+  background-color: #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.letterCardContainer {
+  margin-left: 14px;
+  width: 352px;
+}
+
+.contactCardSmall {
+  display: flex;
+  gap: 35px;
+  border-radius: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 352px;
+  margin-left: 28px;
+}
+
+.contactCardSmall:hover {
+  background: linear-gradient(to top, #ededed, #f8f8f8);
+  cursor: pointer;
+}
+
+.aktiveCardSmall {
+  background: linear-gradient(to top, #ededed, #f8f8f8);
+}
+
+.firstLetterName {
+  padding: 24px 40px;
+  font-size: 20px;
+  border-bottom: 1px solid rgb(211, 211, 211);
+  margin-bottom: 8px;
+}
+
+.contactInitialsSmall {
+  margin-left: 24px;
+  font-size: 12px;
+  background-color: rgba(147, 39, 255, 1);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  color: #ffffff;
+  border: 2px solid white;
+}
+
+.contactInfoSmall {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contactName {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.contactMail {
+  font-size: 16px;
+  color: rgba(0, 124, 238, 1);
+}
+
+#toggleContactCard:checked + label .contactCardSmall {
+  background: rgb(42, 54, 71);
+  color: white;
+}
+
+/*Content right-section*/
+.contactContainer {
+  margin: 110px 64px;
+  margin-bottom: 0;
+  text-wrap: nowrap;
+}
+
+.contactHeadlineContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 27px;
+  height: 73px;
+  padding-bottom: 32px;
+}
+
+.ContactHeadline {
+  font-size: 61px;
+  font-weight: 700;
+}
+
+.contactsBlueLine {
+  height: 59px;
+  border: 3px solid #29abe2;
+}
+
+.contactMainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  opacity: 33%;
+  transform: translateX(100%);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+.contactMainContainer.show {
+  display: flex;
+  opacity: 100%;
+  transform: translateX(0);
+}
+
+.contactInicialsContainer {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+}
+
+.contactInicialLarge {
+  height: 120px;
+  width: 120px;
+  border-radius: 99px;
+  box-shadow: 0 0 2px 1.5px rgba(0, 0, 0, 0.073);
+  font-size: 48px;
+  border: 3px solid white;
+  margin-left: 0;
+}
+
+.contactMainName {
+  font-size: 47px;
+  font-weight: 500;
+  line-height: 56.4px;
+  padding-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.editDeleteContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.editDeleteSubContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.editDeleteSubContainer:hover {
+  color: #29abe2;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.editDeleteSubContainer:hover img {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(700%) hue-rotate(170deg) brightness(100%) contrast(90%);
+}
+
+.contactInfo {
+  font-size: 20px;
+  padding-top: 21.5px;
+  padding-bottom: 21.5px;
+}
+
+.contactEmailPhoneContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactEmailPhone {
+  font-weight: 700;
+}
+
+.editIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+}
+
+.deleteIconContainer {
+  display: flex;
+  justify-content: center;
+  width: 52px;
+}
+
+/*Contact overlay edit*/
+.contactOverlayEditMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.33);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  overflow-x: hidden;
+  z-index: 999;
+}
+
+.contactOverlayEditMain.show {
+  opacity: 1;
+}
+
+.contactOverlayEdit {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  background-color: white;
+  width: 1212px;
+  height: 592px;
+  border-radius: 30px;
+  opacity: 33%;
+  transform: translateX(100%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contactOverlayEdit.show {
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+.contactOverlayLeftSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(42, 54, 71);
+  width: fit-content;
+  padding-left: 56px;
+  padding-right: 56px;
+  height: 100%;
+  color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  font-size: 61px;
+  font-weight: 700;
+  position: relative;
+}
+
+.lineLogoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  position: absolute;
+  top: 153px;
+  left: 56px;
+}
+
+.overlayLine {
+  border: 3px solid #29abe2;
+  width: 90px;
+}
+
+.contactOverlayRightSection {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  gap: 72px;
+  margin-right: 56px;
+  position: relative;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 137px;
+  left: 742px;
+  gap: 32px;
+}
+
+.inputSubContainer {
+  display: flex;
+  align-items: center;
+  width: 422px;
+  position: relative;
+}
+
+.inputContainer input {
+  border-radius: 10px;
+  border: 1px solid rgb(191, 191, 191);
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 20px;
+  padding: 13px 21px;
+  padding-right: 45px;
+  width: 380px;
+}
+
+.inputContainer input:focus {
+  border: 1px solid #29abe2;
+}
+
+/*add Contact*/
+.addContactLeftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgb(42, 54, 71);
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 60.5px;
+  padding-right: 60.5px;
+  color: white;
+}
+
+.addContactHeadline {
+  font-size: 61px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+.addContactSubHeadline {
+  font-size: 27px;
+  padding-bottom: 16px;
+}
+
+.addContactRightSection {
+  display: flex;
+  margin-right: 56px;
+  position: relative;
+}
+
+.dropdownOptions {
+  display: flex;
+  position: absolute;
+  bottom: 160px;
+  right: 90px;
+  z-index: 9999;
+  flex-direction: column;
+  background-color: #fff;
+  gap: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  visibility: hidden;
+}

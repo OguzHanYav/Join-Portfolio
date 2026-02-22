@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./css/assets.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/site_style/contacts.css" />
+    <link rel="stylesheet" href="./css/site_style/login_signup.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <script src="./templates/login_signnup_template.js"></script>
+    <script src="./templates/help_template.js"></script>
+    <script src="./templates/contacts_template.js"></script>
+    <script src="./script.js"></script>
+    <script src="./JavaScript/contacts.js"></script>
+    <script src="./JavaScript/summary.js"></script>
+    <script src="./templates/summary_template.js"></script>
+    <script src="./JavaScript/login_signup.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+  </head>
+
+  <body onload="initContacts()">
+    <div class="filler"></div>
+    <nav class="navBar">
+      <div class="widthFull">
+        <img class="LogoNavImg" src="./assets/img/LogoNav.svg" />
+        <div class="navBarMenu">
+          <div class="menuLinkDiv">
+            <a class="menuLink" href="./summary.html">
+              <img class="navIcon" src="./assets/icons/IconSummary.png" />
+              Summary
+            </a>
+          </div>
+          <div class="menuLinkDiv">
+            <a class="menuLink" href="./add_task.html">
+              <img class="navIcon" src="./assets/icons/IconAddTask.png" />
+              Add Task
+            </a>
+          </div>
+          <div class="menuLinkDiv">
+            <a class="menuLink" href="./board.html">
+              <img class="navIcon" src="./assets/icons/IconBoard.png" />
+              Board
+            </a>
+          </div>
+          <div class="menuLinkDiv active">
+            <a class="menuLink linkActive" href="./contacts.html">
+              <img class="navIcon" src="./assets/icons/IconContacts.png" />
+              Contacts
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="menuLinkDiv mobileNoShow">
+        <a class="menuLink" href="./privacy_policy.html">Privacy Policy</a>
+        <a class="menuLink" href="./legal_notice.html">Legal notice</a>
+      </div>
+    </nav>
+    <div class="grow">
+      <header>
+        <div>
+          <div class="logoMedia"></div>
+          <div class="headline">Kanban Project Management Tool</div>
+        </div>
+        <div class="headerIconDiv">
+          <a class="helpIcon" href="./help.html"></a>
+          <div class="userIcon" id="userIcon"></div>
+        </div>
+      </header>
+      <div id="myDropdown" class="dropdown-content">
+        <a class="dropDownLink helpLinkDropDown" href="./help.html">Help</a>
+        <a href="./legal_notice.html" class="dropDownLink">Legal Notice</a>
+        <a href="./privacy_policy.html" class="dropDownLink">Privacy Policy</a>
+        <span onclick="logOut()" id="logOut" class="dropDownLink">Log out</span>
+      </div>
+      <div class="content">
+        <div onclick="addContact()" class="displayNone addPersonIcon" id="mobileButton"></div>
+        <div class="dropdownOptions displayNone" id="dropdownOptions"></div>
+        <div class="contactsList1">
+          <div class="center w100">
+            <button class="addPersonButton" onclick="addContact()">
+              Add new contact
+              <img class="addPersonIcon" src="assets/icons/personAdd.png" alt="Add person" />
+            </button>
+          </div>
+
+          <!--add Contact start-->
+          <div class="contactOverlayEditMain" style="display: none" id="addContactMain" onclick="closeAddContact()">
+            <div class="contactOverlayEdit mobileAddContact" id="addContact" onclick="event.stopPropagation()">
+              <div class="addContactLeftSection">
+                <img class="contactCloseIcon mobileShow" src="assets/icons/close_white.png" alt="Close" onclick="closeAddContact()" />
+                <img class="overlayLogo paddingLogoOverlay" src="assets/img/Capa 2.png" alt="Join logo" />
+                <div class="addContactHeadlineContainer">
+                  <div class="addContactHeadline">Add contact</div>
+                  <div class="addContactSubHeadline">Tasks are better with a team!</div>
+                  <div class="overlayLine"></div>
+                </div>
+              </div>
+              <div class="addContactRightSection">
+                <div class="personIconBg">
+                  <img class="addContactPersonIcon" src="assets/icons/personWhite.png" alt="Contact logo" />
+                </div>
+                <div>
+                  <form class="inputContainer" onsubmit="saveContact(); return flase">
+                    <div class="inputSubContainer">
+                      <input required id="addContactInputName" type="text" placeholder="Name" />
+                      <img class="contactInputIcon" src="assets/icons/person.png" alt="Person" />
+                    </div>
+                    <div class="inputSubContainer">
+                      <input required id="addContactInputMail" type="email" placeholder="Email" />
+                      <img class="contactInputIcon" src="assets/icons/mail.png" alt="Mail" />
+                    </div>
+                    <div class="inputSubContainer">
+                      <input id="addContactInputPhone" type="number" placeholder="Phone" />
+                      <img class="contactInputIcon" src="assets/icons/call.png" alt="Call" />
+                    </div>
+                    <div class="editOverlayButtonContainer">
+                      <button type="button" onclick="closeAddContact()" class="overlayDeleteButton addContactCancelButton">
+                        Cancel
+                        <img class="addContactCancelIcon" src="assets/icons/close.png" alt="Cancel" />
+                      </button>
+                      <button type="submit" class="overlaySaveButton createContactButtonOverlay">
+                        Create contact
+                        <img class="contactCheckIcon" src="assets/icons/check.png" alt="Check" />
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <img class="contactCloseIcon mobileNoShow" src="assets/icons/close.png" alt="Close" onclick="closeAddContact()" />
+              </div>
+            </div>
+          </div>
+          <!--add Contact end-->
+          <!--contact list start-->
+          <div class="contactsList" id="contactsList"></div>
+          <!--contact list end-->
+        </div>
+        <div id="contactOverDiv" class="contactContainer">
+          <div class="contactHeadlineContainer">
+            <div class="ContactHeadline">Contacts</div>
+            <div class="contactsBlueLine"></div>
+            <div class="subHeadlineColor">Better with a team</div>
+            <div class="returnToList" onclick="returnToList()"></div>
+          </div>
+          <!--contact render container start-->
+          <div style="display: none" id="contactMainContainer" class="contactMainContainer"></div>
+          <!--contact render container end-->
+        </div>
+        <!--contact overlay edit start-->
+        <div class="contactOverlayEditMain" style="display: none" id="contactOverlayEditMain" onclick="closeContactEdit()">
+          <div class="contactOverlayEdit" id="contactOverlayEdit" onclick="event.stopPropagation()">
+            <div class="contactOverlayLeftSection">
+              Edit contact
+              <div class="lineLogoContainer">
+                <img class="overlayLogo" src="assets/img/Capa 2.png" alt="Join Logo" />
+                <div class="overlayLine"></div>
+              </div>
+            </div>
+            <div class="contactOverlayRightSection" id="contactOverlayRightSection"></div>
+          </div>
+        </div>
+        <!--contact overlay edit end-->
+      </div>
+    </div>
+    <div id="loginContent" class="loginContent"></div>
+    <div id="popupDiv" class="popup"></div>
+  </body>
+  <script>
+    let dropdownOptions = document.getElementById("dropdownOptions");
+    let mobileButton = document.getElementById("mobileButton");
+    let headerIcon = document.getElementById("userIcon");
+    let dropdownHeader = document.getElementById("myDropdown");
+    window.addEventListener("click", function (e) {
+      if (headerIcon.contains(e.target)) {
+        dropdownHeader.classList.toggle("show");
+      } else {
+        dropdownHeader.classList.remove("show");
+      }
+    });
+
+    window.addEventListener("click", function (e) {
+      if (!dropdownOptions.contains(e.target) && !mobileButton.contains(e.target)) {
+        dropdownOptions.innerHTML = "";
+        dropdownOptions.style.padding = "0";
+      } else if (dropdownOptions.contains(e.target)) {
+        dropdownOptions.innerHTML = "";
+        dropdownOptions.style.padding = "0";
+      }
+    });
+  </script>
+</html>

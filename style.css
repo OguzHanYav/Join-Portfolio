@@ -1,0 +1,243 @@
+body {
+  display: flex;
+  background-color: #f6f7f8;
+  font-family: Inter;
+}
+
+.editOverlayButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  gap: 25px;
+  padding-top: 18px;
+}
+
+.addTaskButtonContainer {
+  display: flex;
+  justify-content: center;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 3rem;
+}
+
+.textRequired {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.overlayDeleteButton {
+  border: 1px solid #2a3647;
+  background-color: white;
+  color: #2a3647;
+  transition: 0.1s;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  display: flex;
+  width: 113px;
+  border-radius: 8px;
+  font-size: 21px;
+  font-family: Inter;
+  cursor: pointer;
+}
+
+.overlayDeleteButton:hover {
+  color: #29abe2;
+  border: 2px solid #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.overlaySaveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background-color: #2a3647;
+  color: white;
+  font-weight: 700;
+  transition: 0.1s;
+  height: 55px;
+  width: 113px;
+  border-radius: 8px;
+  font-size: 21px;
+  font-family: Inter;
+  cursor: pointer;
+}
+
+.overlaySaveButton:hover {
+  background-color: #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.addContactCancelButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 126px;
+  height: 56px;
+}
+
+.addContactCancelButton:hover img {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(700%) hue-rotate(170deg) brightness(100%) contrast(90%);
+}
+
+.addTaskCancelButton:hover img {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(700%) hue-rotate(170deg) brightness(100%) contrast(90%);
+}
+
+.createContactButtonOverlay {
+  width: 214px;
+  height: 56px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 16px;
+  background-color: rgba(42, 54, 71, 1);
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 8px 0;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dropDownLink {
+  color: rgba(205, 205, 205, 1);
+  padding: 8px 16px 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.dropDownLink:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(47, 68, 99);
+}
+
+.helpLinkDropDown {
+  display: none;
+}
+
+/* test section for dropbox in Assigned to */
+
+/* end of test */
+
+.displayNone {
+  display: none;
+}
+
+.ppContent {
+  margin: 0 22px 22px 96px;
+}
+
+.ppContent h1 {
+  margin: 120px 22px 22px 0;
+}
+
+/* help */
+
+.showHelp {
+  position: absolute;
+  width: calc(100% - 232px - 192px);
+  background-color: rgba(246, 247, 248, 1);
+  left: 232px;
+  top: 96px;
+  padding: 110px 96px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.helpHeadlineContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 27px;
+  height: 73px;
+  padding-bottom: 32px;
+}
+
+.helpHeadline {
+  font-size: 61px;
+  font-weight: 700;
+}
+
+.col_lb {
+  color: rgba(41, 171, 226, 1);
+}
+
+section p {
+  width: fit-content;
+  margin: 0;
+}
+
+section h2 {
+  width: fit-content;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.helpTextDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.helpGuideList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.helpGuideDiv {
+  display: flex;
+  gap: 35px;
+}
+
+#arrowToCloseHelp {
+  background-image: url(./assets/icons/arrow-left-line.png);
+  width: 37px;
+  min-height: 37px;
+  position: fixed;
+  top: 225px;
+  right: 96px;
+}
+
+#arrowToCloseHelp:hover {
+  cursor: pointer;
+}
+
+#arrowToCloseSignUp {
+  background-image: url(./assets/icons/arrow-left-line.png);
+  width: 37px;
+  min-height: 37px;
+}
+
+#arrowToCloseSignUp:hover {
+  cursor: pointer;
+}
+
+.contactRemainingCount {
+  background-color: lightgreen !important;
+  font-size: 16px !important;
+  color: black !important;
+}
+
+.dontShowAtAll {
+  display: none;
+}

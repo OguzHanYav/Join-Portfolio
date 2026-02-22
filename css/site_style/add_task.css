@@ -1,0 +1,374 @@
+#fakeInputArrow {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/arrow_drop_down.png);
+  min-width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: -40px;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/arrow_drop_down.png);
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+}
+
+option {
+  color: black;
+}
+
+.addIcon {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/add.svg);
+  min-width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: -40px;
+}
+
+.imgInInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.divieder {
+  background-color: rgb(209, 209, 209);
+  width: 1px;
+  min-height: 100%;
+}
+
+.addTaskSplit {
+  display: flex;
+}
+
+.addTaskSplit::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.addTaskSplit::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 7px;
+}
+
+.addTaskSplit::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 7px;
+  border: 4px solid #f6f7f8;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .addTaskSplit {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.addTaskPortion {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.inputSubContainerAddTask {
+  width: 90%;
+  max-width: 440px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  position: relative;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+.dropdownContent {
+  flex-direction: column;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+  max-height: 200px;
+  overflow-x: auto;
+  position: absolute;
+  margin-top: 85px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+.inDropdown {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  margin: 2px 0;
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.checkboxAddTask:enabled:checked {
+  accent-color: rgb(42, 54, 71) !important;
+  color: white;
+}
+
+.inDropdown:hover {
+  background-color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+.contactName {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.contactInitialsExtraSmall {
+  font-size: 12px;
+  background-color: rgba(147, 39, 255, 1);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  color: #ffffff;
+  border: 2px solid white;
+}
+
+.inputAddTask {
+  border-radius: 10px;
+  border: 1px solid rgb(191, 191, 191);
+  outline: none;
+  font-size: 20px;
+  padding: 13px 0px;
+  width: 100%;
+  max-width: 440px;
+  padding-right: 13px;
+  box-sizing: border-box;
+  padding-inline-start: 16px;
+  font-family: Inter;
+}
+
+.inputAddTask::placeholder {
+  text-indent: 4px;
+}
+
+.inputHeader {
+  display: flex;
+}
+
+.inputHeader p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.star {
+  color: #ff8090;
+}
+
+.prioDiv {
+  display: flex;
+  justify-content: space-between;
+  max-width: 440px;
+}
+
+.prio {
+  border-radius: 10px;
+  border: 1px solid rgb(191, 191, 191);
+  background-color: #fff;
+  outline: none;
+  font-size: 20px;
+  display: flex;
+  gap: 8px;
+  width: 30%;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.prio:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 22.6px rgba(0, 0, 0, 0.08), 0px 0px 62.6px rgba(0, 0, 0, 0.115), 0px 0px 150.7px rgba(0, 0, 0, 0.15), 0px 0px 500px rgba(0, 0, 0, 0.23);
+}
+
+.prioSvg {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.prioUrgentColor {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/urgentColor.svg);
+}
+
+.prioUrgentColorDiv {
+  background-color: #ff3d00;
+  color: white;
+}
+
+.prioUrgentWhite {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/urgentWhite.svg);
+}
+
+.prioMediumColor {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/mediumColor.svg);
+}
+
+.prioMediumWhite {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/mediumWhite.svg);
+}
+
+.prioMediumColorDiv {
+  background-color: #ffa800;
+  color: white;
+}
+
+.prioLowColor {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/lowColor.svg);
+}
+
+.prioLowWhite {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/lowWhite.svg);
+}
+
+.prioLowColorDiv {
+  background-color: #7ae229;
+  color: white;
+}
+
+#assignedContactsImgDiv {
+  display: flex;
+  padding-left: 8px;
+  width: calc(100% - 16px);
+}
+
+.addTaskInitals {
+  margin-left: -8px;
+}
+
+.assignedContactInList {
+  background-color: rgb(42, 54, 71);
+  color: white;
+}
+
+.assignedContactInList:hover {
+  background-color: rgb(9, 25, 49) !important;
+}
+
+.delIcon {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/delete.png);
+  height: 18px;
+  width: 16px;
+}
+
+.editIcon {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/edit.png);
+  height: 18px;
+  width: 18px;
+}
+
+.checkIcon {
+  background-image: url(https://join-390.developerakademie.net/Join/assets/icons/check.svg);
+  height: 16px;
+  width: 18px;
+}
+
+.subtaskIcon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.subtaskIcon:hover {
+  cursor: pointer;
+}
+
+.subtaskIconDiv {
+  display: none;
+  gap: 4px;
+}
+
+.subtaskDiv {
+  display: flex;
+  justify-content: space-between;
+  height: 27px;
+  margin: 8px none;
+}
+
+#subtasksList {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+#subtasksList::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+#subtasksList::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 7px;
+}
+
+#subtasksList::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 7px;
+  border: 4px solid #f6f7f8;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  #subtasksList {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.editSubtaskDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ml--55 {
+  margin-left: -55px;
+}
+
+.inputAddTaskEdit {
+  border: none;
+  background-color: #fff;
+  border-bottom: solid 1px rgb(148, 213, 240);
+  width: 100%;
+  height: 24px;
+}
+
+.deleteMessage {
+  position: fixed;
+  bottom: 60%;
+  left: 60%;
+  transform: translateX(-50%);
+  background-color: #2f3a49;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.deleteMessage.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.editSplit {
+  overflow-y: auto;
+  max-height: 550px;
+}

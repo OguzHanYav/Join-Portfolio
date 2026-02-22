@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join – Login</title>
+
+  <!-- optional: deine Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Minimal: du kannst später dein echtes Login-Markup reinpacken -->
+  <main style="max-width: 900px; margin: 40px auto; padding: 16px;">
+    <h1>Join – Demo</h1>
+    <p>Starte die Demo oder melde dich an.</p>
+
+    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+      <button onclick="guestLogin()">Als Gast starten</button>
+      <a href="summary.html">Zur Summary</a>
+      <a href="board.html">Zum Board</a>
+      <a href="contacts.html">Zu Contacts</a>
+    </div>
+  </main>
+
+<script>
+  function guestLogin() {
+    const user = { name: "Guest", email: "guest@join.dev", id: "guest" };
+    sessionStorage.setItem("user", JSON.stringify(user));
+    window.location.href = "summary.html";
+  }
+</script>
+
+  <!-- dein vorhandenes Login/Signup Script -->
+  <script src="JavaScript/login_signup.js"></script>
+</body>
+</html>
